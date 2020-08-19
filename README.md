@@ -1,5 +1,5 @@
 # Basic-Libtorch-DLL
-A "Hello World" example for building a DLL using Libtorch. This particular one is designed to work with Unreal Engine.
+A "Hello World" example for building a DLL using Libtorch. This This example Run Style Transfer on a live video feed, and is designed to work with Unreal Engine.
 
 ## Requirements:
 - Cmake
