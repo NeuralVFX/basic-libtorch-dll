@@ -1,5 +1,5 @@
 # Basic-Libtorch-DLL
-A "Hello World" example for building a DLL using Libtorch. 
+A "Hello World" example for building a DLL using Libtorch. This particular one is designed to work with Unreal Engine.
 
 ## Requirements:
 - Cmake
@@ -14,5 +14,5 @@ A "Hello World" example for building a DLL using Libtorch.
 cmake ./build -DCMAKE_PREFIX_PATH=C:\libtorch -DCMAKE_GENERATOR_PLATFORM=x64  ..cmake --build . --config Release
 cmake --build . --config Release
 ```
-- This should generate a file called `release/export_wrapper.dll`
-- Copy this file wherever you need
+- This should generate a file called `Release/export_wrapper.dll`
+- Copy this file wherever you need!
