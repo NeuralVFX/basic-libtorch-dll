@@ -3,7 +3,7 @@
 A "Hello World" example for building a DLL using Libtorch. This example runs Style Transfer on a live video feed, and is designed to work with `Unreal Engine`.
 
 ## About
-This is one of two repositories which are required to build this project:
+This is one of two repositories which are part of the same project:
 - [basic-unreal-libtorch-plugin](https://github.com/NeuralVFX/basic-unreal-libtorch-plugin)
 - [basic-libtorch-dll](https://github.com/NeuralVFX/basic-libtorch-dll) - You are here.
 
