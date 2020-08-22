@@ -7,7 +7,7 @@ This is one of two repositories which are required to build this project:
 - [basic-unreal-libtorch-plugin](https://github.com/NeuralVFX/basic-unreal-libtorch-plugin)
 - [basic-libtorch-dll](https://github.com/NeuralVFX/basic-libtorch-dll) - You are here.
 
-This runs on CPU(I don't own a GPU), however with only small changes I believe this should work on GPU.
+This runs on CPU(I don't own a GPU), however with only minor changes I believe this should work on GPU.
 
 ## Requirements:
 - Cmake
