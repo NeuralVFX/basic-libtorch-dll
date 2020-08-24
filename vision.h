@@ -21,7 +21,7 @@ public:
 	torch::jit::script::Module module;
 
 	// Camera Stuff
-	int cam_id = 1;
+	int cam_id = 0;
 	cv::Mat frame;
 
 	// Capture dimensions
