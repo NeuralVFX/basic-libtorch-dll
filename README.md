@@ -1,18 +1,18 @@
 ![](coke.png)
 # Basic-Libtorch-DLL
-A "Hello World" example for building a DLL using Libtorch. This example runs Style Transfer on a live video feed, and is designed to work with `Unreal Engine`.
+A "Hello World" example for building a DLL using Libtorch. This example runs Style Transfer on a live video-feed, and is designed to work with `Unreal Engine`.
 
 ## About
 This is one of two repositories which are part of the same project:
 - [basic-unreal-libtorch-plugin](https://github.com/NeuralVFX/basic-unreal-libtorch-plugin)
 - [basic-libtorch-dll](https://github.com/NeuralVFX/basic-libtorch-dll) - You are here.
 
-This runs on CPU(I don't own a GPU), however with only minor changes I believe this should work on GPU.
+This runs on CPU(I don't own a GPU), however, with only minor changes I believe this should work on GPU.
 
 ## Requirements:
-- Cmake
+- CMake
 - Visual Studio
-- OpenCV 4.1
+- OpenCV 4.1.2
 - LibTorch 1.5
 
 ## Project Setup
