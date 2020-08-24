@@ -13,7 +13,7 @@ This runs on CPU(I don't own a GPU), however, with only minor changes I believe 
 - CMake
 - Visual Studio
 - OpenCV 4.1.2
-- LibTorch 1.5
+- LibTorch 1.5.1
 
 ## Project Setup
 - Clone this repo: `git clone https://github.com/NeuralVFX/basic-libtorch-dll.git`
