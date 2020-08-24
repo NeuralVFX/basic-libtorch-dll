@@ -16,6 +16,7 @@ This runs on CPU(I don't own a GPU), however, with only minor changes I believe 
 - LibTorch 1.5
 
 ## Project Setup
+- Clone this repo: `git clone https://github.com/NeuralVFX/basic-libtorch-dll.git`
 - Open `vision.cpp` and replace the `traced_style_transfer_model.pt` path to match the path on your system
 - Open `build/CMakeLists.txt` and replace the directories `Torch_DIR`, `OpenCV_DIR`, `OpenCV_INC_DIR` and `OpenCV_LIB_DIR`
 - Run these commands to build the project(replace `DCMAKE_PREFIX_PATH` with your libtorch install directory):
