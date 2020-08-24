@@ -26,5 +26,6 @@ cmake --build . --config Release
 ```
 - This should generate a Visual Studio Project and a file called `Release/export_wrapper.dll`
 - Copy this file wherever you need!
-- Or follow the directions in the [basic-libtorch-dll](https://github.com/NeuralVFX/basic-libtorch-dll) repo to run this within `Unreal Engine`
+- Or follow the directions in the [basic-unreal-libtorch-plugin](https://github.com/NeuralVFX/basic-unreal-libtorch-plugin)
+ repo to run this within `Unreal Engine`
 
