@@ -6,8 +6,7 @@ A "Hello World" example for building a DLL using Libtorch. This example runs Sty
 This is one of two repositories which are part of the same project:
 - [basic-unreal-libtorch-plugin](https://github.com/NeuralVFX/basic-unreal-libtorch-plugin)
 - [basic-libtorch-dll](https://github.com/NeuralVFX/basic-libtorch-dll) - You are here.
-
-This runs on CPU(I don't own a GPU), however, with only minor changes I believe this should work on GPU.
+- This is setup to run on a GPU
 
 ## Requirements:
 - CMake
@@ -17,7 +16,8 @@ This runs on CPU(I don't own a GPU), however, with only minor changes I believe 
 
 ## Project Setup
 - Clone this repo: `git clone https://github.com/NeuralVFX/basic-libtorch-dll.git`
-- Open `vision.cpp` and replace the `traced_style_transfer_model.pt` path to match the path on your system
+- Open the `code` directory
+- Open `vision.cpp` and replace the `traced_style_transfer_model_gpu.pt` path to match the path on your system
 - Open `build/CMakeLists.txt` and replace the directories `Torch_DIR`, `OpenCV_DIR`, `OpenCV_INC_DIR` and `OpenCV_LIB_DIR`
 - Run these commands to build the project(replace `DCMAKE_PREFIX_PATH` with your libtorch install directory):
 ```
