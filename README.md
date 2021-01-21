@@ -17,7 +17,7 @@ This is one of two repositories which are part of the same project:
 ## Project Setup
 - Clone this repo: `git clone https://github.com/NeuralVFX/basic-libtorch-dll.git`
 - Open the `code` directory
-- Open `vision.cpp` and replace the `traced_style_transfer_model_gpu.pt` path to match the path on your system
+- Open `vision.h` and replace the `traced_style_transfer_model_gpu.pt` path to match the path on your system
 - Open `build/CMakeLists.txt` and replace the directories `Torch_DIR`, `OpenCV_DIR`, `OpenCV_INC_DIR` and `OpenCV_LIB_DIR`
 - Run these commands to build the project(replace `DCMAKE_PREFIX_PATH` with your libtorch install directory):
 ```
