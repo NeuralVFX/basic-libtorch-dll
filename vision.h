@@ -13,26 +13,26 @@
 class vision
 {
 public:
-
-	// Video Feed
+	
+	/** Video Feed */
 	cv::VideoCapture _capture;
-
-	// Torch Model Loader
+	
+	/** Torch Model Loader */
 	torch::jit::script::Module module;
-
-	// Camera Stuff
+	
+	/** Camera Stuff */
 	int cam_id = 0;
 	cv::Mat frame;
-
-	// Capture dimensions
+	
+	/** Capture dimensions */
 	int frame_width = 1920;
 	int frame_height = 1080;
-
-	// Outut Dimensions
+	
+	/** Outut Dimensions */
 	int out_width = 512;
 	int out_height = 512;
-
-	// Neural Net Resolution
+	
+	/** Neural Net Resolution */
 	int run_size = 512;
 
 
@@ -40,10 +40,22 @@ public:
 
 	vision();
 
+	/**
+	 * Open camera, and initiate model.
+	 * @return Whether the operation was sucessfull.
+	 */
 	bool init();
 
+	/**
+	 * Close camera
+	 */
 	void close();
 
+	/**
+	 * Run neural net on camera feed and return output.
+	 * @param data - Array to ouput raw data to.
+	 * @return Whether the operation was sucessfull.
+	 */
 	bool get_raw_image_bytes(unsigned char* data);
 
 	~vision();
