@@ -21,7 +21,7 @@ public:
 	torch::jit::script::Module module;
 
 	/** Path for Our Model  ( REPLACE PATH AS NEEDED ) */
-	const string model_path = "C:/git-clone-tests/basic-libtorch-dll/models/traced_style_transfer_model_gpu.pt"
+	const string model_path = "C:/git-clone-tests/basic-libtorch-dll/models/traced_style_transfer_model_gpu.pt";
 	
 	/** Camera Stuff */
 	int cam_id = 0;
