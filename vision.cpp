@@ -10,7 +10,7 @@ vision::vision()
 bool vision::init()
 {
 	// Load Torch Style Transfer Model  ( REPLACE PATH AS NEEDED )
-	module = torch::jit::load("C:/basic_libtorch_dll/traced_style_transfer_model.pt");
+	module = torch::jit::load("C:/git-clone-tests/basic-libtorch-dll/traced_style_transfer_model_gpu.pt", torch::kCUDA);
 
 	// Setup Open CV Capture
 	_capture.open(cam_id);
@@ -41,15 +41,18 @@ bool vision::get_raw_image_bytes(unsigned char* data)
 	resize.convertTo(resize, CV_32FC3, 1.0f / 255.0f);
 
 	// Convert to Torch Tensor and Normalize
-	auto input_tensor = torch::from_blob(resize.data, { 1, run_size, run_size, 3 });
+	auto input_tensor = torch::from_blob(resize.data,
+		{ 1, run_size, run_size, 3 });
+
 	input_tensor = input_tensor.permute({ 0, 3, 1, 2 });
 	input_tensor = input_tensor.sub(.5).mul(2.0);
+	input_tensor = input_tensor.to(torch::kCUDA);
 
 	// Pass Data Through Neural Net to Get Output
 	std::vector<torch::jit::IValue> inputs;
 	inputs.push_back(input_tensor);
 	at::Tensor result= module.forward(inputs).toTensor();
-	at::Tensor out_tensor = result.detach();
+	at::Tensor out_tensor = result.detach().to(torch::kCPU);
 
 	// Prepair Tensor To Convert to OpenCV
 	out_tensor = out_tensor.permute({ 0, 2, 3, 1 }).squeeze(0);
@@ -58,7 +61,10 @@ bool vision::get_raw_image_bytes(unsigned char* data)
 
 	// Copy Tensor Data into MAT
 	cv::Mat result_img(run_size, run_size, CV_8UC3);
-	std::memcpy((void *)result_img.data, out_tensor.contiguous().data_ptr(), sizeof(torch::kU8) * out_tensor.numel());
+	std::memcpy((void *)result_img.data,
+		out_tensor.contiguous().data_ptr(),
+		sizeof(torch::kU8) * out_tensor.numel());
+
 	cv::Mat out_img(out_height, out_width, frame.type());
 
 	// Resize and Convert Color for Unreal Engine
