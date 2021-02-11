@@ -1,4 +1,4 @@
-![](example.png)
+![](style.gif)
 # Basic-Libtorch-DLL
 A "Hello World" example for building a DLL using Libtorch. This example runs Style Transfer on a live video-feed, and is designed to work with `Unreal Engine`.
 
